@@ -1,64 +1,105 @@
 # come back to and add in
 -Install Jellyfin Intros Plugin from `https://github.com/BrianCArnold/jellyfin-plugin-intros`
+-need to add in the parts where you remove username pasword and change the libnrary and tags. point it out for the use use chatgpt to switch out personal information.
 
-This will: ✔ Log into Jellyfin
+# Python-Jellyfin-Tagger
+
+Python Script that autotags library content in Jellyfin. Created for the Local-Intros plugin, which uses local pre-roll media.
+
+This will: 
+✔ Log into Jellyfin
 ✔ Find the "name of your library" library
 ✔ Add the "your specified tag" tag to all items inside
 
-#  -Start- Python-Jellyfin-Tagger
-Python Script that Autotags Library content in Jellyfin. Created for Local-Intros plugin that uses local pre-roll media.
+---
 
-# Instructions
+## Prerequisites
 
--Download Latest Version Of Python `https://www.python.org/downloads/` (Make sure to have the path assoication in the optional box checked, so command prompt recognizes python commands.)
-Check if Python is Installed
-To confirm Python was installed and recognized by your system, open command prompt and type:
-`python --version`
+Jellyfin Server
 
-# Install Required Python Packages
 
-We need the Jellyfin API Client to interact with Jellyfin.
-Install the package using pip
-Run this in Command Prompt:
-`pip install jellyfin-apiclient-python`
+---
 
-# Enable API Access in Jellyfin
+## Instructions
 
-Open Jellyfin Web UI (http://localhost:8096).
+### 1. Install Python
 
-Go to Dashboard > Advanced > API Keys.
+- Download the latest version of Python from [Python.org](https://www.python.org/downloads/).
+- **Important**: Make sure to check the box to add Python to your PATH during installation.
 
-Ensure API Access is Enabled (if not already enabled).
+   After installation, confirm Python is correctly installed by opening the command prompt and typing:
+   ```
+   python --version
+   ```
 
-Add an API key
+### 2. Install Required Python Packages
 
-Note- Will also work in Jellyfin Media Player
+To interact with Jellyfin, we need to install the Jellyfin API Client.
 
-# Scripts
-There are two scripts, one for tagging Movies and one for Series. add in a third for combined option later
+- Open Command Prompt and run the following command to install the required package:
+  ```
+  pip install jellyfin-apiclient-python
+  ```
 
-# Running the Scripts
-There are two scripts, one for tagging Movies and one for Series. There will be a third as spoon i come back and edit here
- The easies way to Create the files is using notepad:
+### 3. Enable API Access in Jellyfin
 
- go to desktop, click new text document, reanme the file to whatever you want and add .py to the extension replace the txt extension.
+- Open the Jellyfin Web UI: [http://localhost:8096](http://localhost:8096).
+- Navigate to **Dashboard > Advanced > API Keys**.
+- Ensure that **API Access** is enabled (if it's not already).
+- Add an API key for the script to use.
 
-In my case, 
-    jellyfin_tagger_Movies.py
+**Note**: This will also work with Jellyfin Media Player.
 
-  jellyfin_tagger_Series.py
+---
 
-Place them in a directory you can access from Command Prompt. insert gif here to show how to copy directory paths
+## Scripts
 
-cd your direcrory path here
-python "script name"
+There are currently three scripts available:
 
-let script run, if you have alot of content, it will be a long time especially for shows
+1. **Tag Movies**  
+2. **Tag Series**
+3. **Merged**
 
-Verify Changes
+### 1. Create the Scripts
 
-    Open Jellyfin Web UI (http://localhost:8096).
+- Download From Repository [Here](blank/)
 
-    Navigate to Movies or Series and check if the tags appear in the metadata.
+Or Manually create it
+- The easiest way to create the scripts is by using Notepad:
+   - Go to your desktop, click **New > Text Document**.
+   - Rename the file to `yournamehere.py` (or `jellyfin_tagger_Series.py` for the other script).
+   - Make sure to change the file extension from `.txt` to `.py`.
+  
 
-    If successful, the logs in Command Prompt will confirm the tags were added.
+### 2. Run the Scripts
+
+- Place the scripts in a directory you can access from the Command Prompt.
+- Open Command Prompt and navigate to the script directory:
+  ```
+  cd your-directory-path-here
+  ```
+![1](https://github.com/user-attachments/assets/d4de3b10-50d0-4afc-b7dd-e55c4c595776)
+
+![2](https://github.com/user-attachments/assets/8cab0e0d-d4b7-4c42-8a28-b3cfe38e1014)
+
+
+- Run the script with:
+  ```
+  python "script_name.py"
+  ```
+
+- **Note**: If you have a lot of content, it may take some time, especially for shows.
+
+---
+
+## Verify Changes
+
+1. Open the Jellyfin Web UI: [http://localhost:8096](http://localhost:8096).
+2. Navigate to **Movies** or **Series** and check if the tags appear in the metadata.
+3. If successful, the logs in Command Prompt will confirm that the tags were added.
+
+---
+
+## Final Steps
+
+
