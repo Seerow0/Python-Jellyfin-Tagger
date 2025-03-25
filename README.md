@@ -103,4 +103,23 @@ If you would prefer to quickly test the script, I would create a temp library wi
 
 ## Final Steps
 
+If you are using the local intros plugin or are interested in having pre-rolls load in before your content, I will include the instructions here.
+
+Go to https://github.com/BrianCArnold/jellyfin-plugin-intros
+
+**Copy and pasted from the repo. Use caution when installing third party plugins.**
+
+Open the dashboard in Jellyfin, then select Plugins and open Repositories at the top.
+
+Click the + button, and add the repository URL below, naming it whatever you like. Save.
+
+https://raw.githubusercontent.com/BrianCArnold/jellyfin-plugin-intros/master/manifest.json
+Select Catalog at the top and click on 'Intros' at the very bottom of the list. Install the most recent version.
+
+Restart Jellyfin and go back to the plugin settings. Select Installed at the top and then 'Intros' to configure.
+
+In the settings for local intros, you will add the directory/folder where your pre-roll videos are. Then in the bottom, you can associate the videos with tags. Just make sure your tag matches the tag from the script exactly.
+
+save the settings at the bottom and play your video. the preroll should play. you can also add multiple tags to your content and have different pre-roll videos take priorty based on the tag heirarchy.
+
 
