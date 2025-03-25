@@ -8,15 +8,15 @@ Python Script that autotags library content in Jellyfin. Created for the Local-I
 
 This will: 
 ✔ Log into Jellyfin
-✔ Find the "name of your library" library
-✔ Add the "your specified tag" tag to all items inside
+✔ Find the "your_library_name" library
+✔ Add the "your_specified_tag" tag to all items inside
 
 ---
 
 ## Prerequisites
 
 Jellyfin Server
-
+http://localhost:8096 --- If this link does not take you to jellyfin UI, right click on your server in the taskar and click open jellyfin.
 
 ---
 
@@ -26,6 +26,7 @@ Jellyfin Server
 
 - Download the latest version of Python from [Python.org](https://www.python.org/downloads/).
 - **Important**: Make sure to check the box to add Python to your PATH during installation.
+- Also select the PIP option. This might be default but make sure nonetheless. 
 
    After installation, confirm Python is correctly installed by opening the command prompt and typing:
    ```
@@ -48,17 +49,17 @@ To interact with Jellyfin, we need to install the Jellyfin API Client.
 - Ensure that **API Access** is enabled (if it's not already).
 - Add an API key for the script to use.
 
-**Note**: This will also work with Jellyfin Media Player.
+**Note**: This will also work in Jellyfin Media Player.
 
 ---
 
 ## Scripts
 
-There are currently three scripts available:
+There are currently two scripts available:
 
-1. **Tag Movies**  
-2. **Tag Series**
-3. **Merged**
+1. **Tag for Library 1** --For example tagging all content in movies Library with a single tag--
+2. **Tag for Library 1 And 2** --For example tagging all content in the movies and series folder with two different tags for each library--
+
 
 ### 1. Create the Scripts
 
@@ -67,7 +68,7 @@ There are currently three scripts available:
 Or Manually create it
 - The easiest way to create the scripts is by using Notepad:
    - Go to your desktop, click **New > Text Document**.
-   - Rename the file to `yournamehere.py` (or `jellyfin_tagger_Series.py` for the other script).
+   - Rename the file to `yournamehere.py`.
    - Make sure to change the file extension from `.txt` to `.py`.
   
 
@@ -87,17 +88,17 @@ Or Manually create it
   ```
   python "script_name.py"
   ```
-
-- **Note**: If you have a lot of content, it may take some time, especially for shows.
+The script should start running and tagging files.
+- **Note**: If you have a lot of content, it may take some time, especially for episodic content.
 
 ---
 
 ## Verify Changes
-
 1. Open the Jellyfin Web UI: [http://localhost:8096](http://localhost:8096).
 2. Navigate to **Movies** or **Series** and check if the tags appear in the metadata.
 3. If successful, the logs in Command Prompt will confirm that the tags were added.
 
+If you would prefer to quickly test the script, I would create a temp library with one or two media files in there to see if it works. Then apply it to what may be a extensive library since your using this script in the first place.
 ---
 
 ## Final Steps
