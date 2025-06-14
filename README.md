@@ -1,4 +1,5 @@
 # come back to and add in
+06-14-2025-UPDATE------CONTINUE
 -Install Jellyfin Intros Plugin from `https://github.com/BrianCArnold/jellyfin-plugin-intros`
 -need to add in the parts where you remove username pasword and change the libnrary and tags. point it out for the use use chatgpt to switch out personal information.
 
